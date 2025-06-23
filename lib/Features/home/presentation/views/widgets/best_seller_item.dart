@@ -2,6 +2,7 @@ import 'package:bookly_app/Features/home/presentation/views/widgets/rating.dart'
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:bookly_app/core/utils/styles.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class BestSellerItem extends StatelessWidget {
@@ -67,3 +68,4 @@ class BestSellerItem extends StatelessWidget {
     );
   }
 }
+
