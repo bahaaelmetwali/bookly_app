@@ -34,10 +34,10 @@ class BestSellerItem extends StatelessWidget {
 
               children: [
                 SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.60,
+                  width: MediaQuery.of(context).size.width * 0.7,
 
                   child: Text(
-                    'Harry potter                      and the Globet of Fire',
+                    'Harry potter                      and the Globet of Firedad',
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: styles.textStyle20.copyWith(
@@ -49,7 +49,16 @@ class BestSellerItem extends StatelessWidget {
                 SizedBox(height: 3),
                 Text('J.K Rowling', style: styles.textStyle14),
                 SizedBox(height: 3),
-                Rating(),
+                Padding(
+                  padding: const EdgeInsets.only(right: 16),
+                  child: Row(
+                    children: [
+                      Text('19.99€', style: styles.textStyle20),
+                      Spacer(),
+                      Rating(),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),

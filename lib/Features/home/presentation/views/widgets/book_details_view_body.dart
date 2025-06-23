@@ -12,6 +12,7 @@ class BookDetailsViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           CustomBookDetailsAppBar(),
           SizedBox(height: 10),
@@ -28,6 +29,8 @@ class BookDetailsViewBody extends StatelessWidget {
             opacity: .8,
             child: Text('Rudyard Kipling', style: styles.textStyle14),
           ),
+          SizedBox(height: 10),
+          Rating(),
         ],
       ),
     );

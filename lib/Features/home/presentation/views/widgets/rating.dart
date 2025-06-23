@@ -7,22 +7,18 @@ class Rating extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Row(
-                  children: [
-                    Text('19.99€', style: styles.textStyle20),
-                    Spacer(),
-                    Icon(FontAwesomeIcons.solidStar, color: Color(0xfffddb5c)),
-                    SizedBox(width: 5.8),
-                    Text(
-                      '4.8',
-                      style: styles.textStyle16.copyWith(
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    SizedBox(width: 5.8),
-                    Text('(2390)'),
-                    SizedBox(width: 50),
-                  ],
-                );
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(FontAwesomeIcons.solidStar, color: Color(0xfffddb5c), size: 18),
+        SizedBox(width: 5.8),
+        Text(
+          '4.8',
+          style: styles.textStyle16.copyWith(fontWeight: FontWeight.bold),
+        ),
+        SizedBox(width: 5.8),
+        Text('(2390)'),
+      ],
+    );
   }
 }
