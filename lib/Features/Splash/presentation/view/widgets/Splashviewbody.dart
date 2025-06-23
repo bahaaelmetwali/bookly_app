@@ -1,4 +1,3 @@
-import 'package:bookly_app/Features/home/presentation/views/homeview.dart';
 import 'package:bookly_app/core/utils/app_router.dart';
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
@@ -61,7 +60,7 @@ class _SplashviewbodyState extends State<Splashviewbody>
 
   void navigatetohome() {
     Future.delayed(Duration(seconds: 3), () {
-      context.go(AppRouter.Khomeview);
+      context.go(AppRouter.kHomeView);
     });
   }
 }
