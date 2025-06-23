@@ -19,7 +19,7 @@ class Featuredlistview extends StatelessWidget {
               onTap: () {
                 context.go(AppRouter.kBookDetailsview);
               },
-              child: Featuredlistviewitem(),
+              child: BookImage(),
             );
           },
         ),
