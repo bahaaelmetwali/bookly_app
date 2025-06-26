@@ -1,4 +1,4 @@
-import 'package:bookly_app/Features/home/presentation/views/widgets/featuredlistviewitem.dart';
+import 'package:bookly_app/Features/home/presentation/views/widgets/book_image.dart';
 import 'package:bookly_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';

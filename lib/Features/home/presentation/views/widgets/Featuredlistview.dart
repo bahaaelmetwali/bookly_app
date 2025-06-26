@@ -1,6 +1,6 @@
 import 'package:bookly_app/Features/home/data/repos/home_repo_imp.dart';
 import 'package:bookly_app/Features/home/presentation/manager/fetch_featured_books/cubit/fetchfeaturedbooks_cubit.dart';
-import 'package:bookly_app/Features/home/presentation/views/widgets/featuredlistviewitem.dart';
+import 'package:bookly_app/Features/home/presentation/views/widgets/book_image.dart';
 import 'package:bookly_app/core/utils/app_router.dart';
 import 'package:bookly_app/core/utils/service_locator.dart';
 import 'package:bookly_app/core/widgets/custom_error_message.dart';
@@ -22,13 +22,17 @@ class Featuredlistview extends StatelessWidget {
             child: SizedBox(
               height: MediaQuery.of(context).size.height * 0.29,
               child: ListView.builder(
+                itemCount: state.books.length,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
                   return GestureDetector(
                     onTap: () {
                       context.go(AppRouter.kBookDetailsview);
                     },
-                    child: BookImage(urlImage: state.books[index].volumeInfo.imageLinks.thumbnail,),
+                    child: BookImage(
+                      urlImage:
+                          state.books[index].volumeInfo.imageLinks.thumbnail,
+                    ),
                   );
                 },
               ),
