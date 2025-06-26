@@ -1,13 +1,13 @@
 import 'package:bookly_app/Features/home/data/models/book_model/book_model/book_model.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/book_image.dart';
-import 'package:bookly_app/Features/home/presentation/views/widgets/rating.dart';
+import 'package:bookly_app/Features/home/presentation/views/widgets/publish_date.dart';
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class BestSellerItem extends StatelessWidget {
-  const BestSellerItem({super.key, required this.bookModel});
+class NewestItem extends StatelessWidget {
+  const NewestItem({super.key, required this.bookModel});
   final BookModel bookModel;
 
   @override

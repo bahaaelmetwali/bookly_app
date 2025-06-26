@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-class BestSellerListView extends StatelessWidget {
-  const BestSellerListView({super.key});
+class NewestItemsListView extends StatelessWidget {
+  const NewestItemsListView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class BestSellerListView extends StatelessWidget {
                   onTap: () {
                     context.go(AppRouter.kBookDetailsview);
                   },
-                  child: BestSellerItem(bookModel: state.books[index]),
+                  child: NewestItem(bookModel: state.books[index]),
                 ),
               );
             },
