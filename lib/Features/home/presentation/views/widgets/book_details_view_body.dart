@@ -23,7 +23,7 @@ class BookDetailsViewBody extends StatelessWidget {
                 SizedBox(height: 10),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.33,
-                  child: BookImage(),
+                  child: BookImage(urlImage: 'https://variety.com/wp-content/uploads/2017/12/fx-logo.jpg?w=1000&h=563&crop=1',),
                 ),
                 SizedBox(height: 30),
                 Text(

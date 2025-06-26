@@ -17,7 +17,7 @@ class SimilarBookListView extends StatelessWidget {
             onTap: () {
               context.go(AppRouter.kBookDetailsview);
             },
-            child: BookImage(),
+            child: BookImage(urlImage: 'https://variety.com/wp-content/uploads/2017/12/fx-logo.jpg?w=1000&h=563&crop=1',),
           );
         },
       ),
