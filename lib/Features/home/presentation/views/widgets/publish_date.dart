@@ -12,12 +12,16 @@ class publishDate extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(FontAwesomeIcons.calendar, color: Color(0xfffddb5c), size: 24),
-        SizedBox(width: 5.8),
-        Text(
-          publishTime,
-          style: styles.textStyle16.copyWith(fontWeight: FontWeight.bold),
+        SizedBox(width: 6),
+        SizedBox(
+          width: 60,
+          child: Text(
+            publishTime,
+            textAlign: TextAlign.center,
+            style: styles.textStyle16.copyWith(fontWeight: FontWeight.bold),
+          ),
         ),
-        SizedBox(width: 15),
+        SizedBox(width: 10),
       ],
     );
   }

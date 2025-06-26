@@ -55,7 +55,14 @@ class NewestItem extends StatelessWidget {
                     children: [
                       Text('Free', style: styles.textStyle20),
                       Spacer(),
-                      publishDate(publishTime: bookModel.volumeInfo.publishedDate!,),
+                      publishDate(
+                        publishTime:
+                            bookModel.volumeInfo.publishedDate?.substring(
+                              0,
+                              4,
+                            ) ??
+                            'Unknown Date',
+                      ),
                     ],
                   ),
                 ),
