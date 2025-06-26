@@ -35,7 +35,7 @@ class BookDetailsViewBody extends StatelessWidget {
                   child: Text('Rudyard Kipling', style: styles.textStyle14),
                 ),
                 SizedBox(height: 15),
-                Rating(),
+                // Rating(),
                 SizedBox(height: 30),
 
                 Row(

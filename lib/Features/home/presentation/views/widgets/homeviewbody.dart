@@ -20,7 +20,7 @@ class Homeviewbody extends StatelessWidget {
               SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.only(top: 20.0, left: 20),
-                child: Text('Best seller', style: styles.textStyle18),
+                child: Text('Newest Books', style: styles.textStyle18),
               ),
               SizedBox(height: 1),
             ],

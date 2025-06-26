@@ -1,12 +1,14 @@
+import 'package:bookly_app/Features/home/data/models/book_model/book_model/book_model.dart';
+import 'package:bookly_app/Features/home/presentation/views/widgets/book_image.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/rating.dart';
 import 'package:bookly_app/constants.dart';
-import 'package:bookly_app/core/utils/assets.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class BestSellerItem extends StatelessWidget {
-  const BestSellerItem({super.key});
+  const BestSellerItem({super.key, required this.bookModel});
+  final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {
@@ -18,14 +20,8 @@ class BestSellerItem extends StatelessWidget {
         children: [
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.18,
-            child: AspectRatio(
-              aspectRatio: 2 / 3,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  image: DecorationImage(image: AssetImage(AssetsData.test)),
-                ),
-              ),
+            child: BookImage(
+              urlImage: bookModel.volumeInfo.imageLinks.thumbnail,
             ),
           ),
           SizedBox(width: 20),
@@ -38,7 +34,7 @@ class BestSellerItem extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * 0.7,
 
                   child: Text(
-                    'Harry potter                      and the Globet of Firedad',
+                    bookModel.volumeInfo.title!,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: styles.textStyle20.copyWith(
@@ -48,15 +44,18 @@ class BestSellerItem extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 3),
-                Text('J.K Rowling', style: styles.textStyle14),
+                Text(
+                  bookModel.volumeInfo.authors![0],
+                  style: styles.textStyle14,
+                ),
                 SizedBox(height: 3),
                 Padding(
                   padding: const EdgeInsets.only(right: 16),
                   child: Row(
                     children: [
-                      Text('19.99€', style: styles.textStyle20),
+                      Text('Free', style: styles.textStyle20),
                       Spacer(),
-                      Rating(),
+                      publishDate(publishTime: bookModel.volumeInfo.publishedDate!,),
                     ],
                   ),
                 ),
@@ -68,4 +67,3 @@ class BestSellerItem extends StatelessWidget {
     );
   }
 }
-
